@@ -90,165 +90,197 @@ print()
 print(name+", Please select a field to explore from the list below:\n[Python]\t[Network]\n[Database]\t[Business]")
 Field = input("I Choose : ")
 print("________________________________________________")
-if (Field.upper()) == "PYTHON":
-    print(name+", You have selected "+Field+".\nComplete the multiple questions\nwith a score of 70% or more inorder to continue to the next level.\n")
-    print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_\n")
-    print("Skills Rating:\n[Beginner]\t[Intermediate]\t[Rockstar]\n")
-    Expert_level = input("Please tell us your level of expertise on " + Field+"ing : ")
-    print("================================================\n")
-    if (Expert_level.upper()) == "BEGINNER":
-        print("You have rated yourself as a " + Expert_level+".\n")
-        questions = [
-            question(question_prompts[0], "c"),
-            question(question_prompts[1], "a"),
-            question(question_prompts[2], "b"),
-            question(question_prompts[3], "b"),
-            question(question_prompts[4], "c"),
-        ]
-    elif (Expert_level.upper()) == "INTERMEDIATE":
-        print("You have rated yourself as an " + Expert_level + ".\n")
-        questions = [
-            question(question_prompts[20], "b"),
-            question(question_prompts[21], "a"),
-            question(question_prompts[22], "a"),
-            question(question_prompts[23], "d"),
-            question(question_prompts[24], "a"),
-        ]
-    elif (Expert_level.upper()) == "ROCKSTAR":
-        print("You have rated yourself as a " + Expert_level + ".\n")
-        questions = [
-            question(question_prompts[40], "a"),
-            question(question_prompts[41], "a"),
-            question(question_prompts[42], "b"),
-            question(question_prompts[43], "c"),
-            question(question_prompts[44], "a"),
-        ]
+try:
+    if (Field.upper()) == "PYTHON":
+        print(
+            name + ", You have selected " + Field + ".\nComplete the multiple questions\nwith a score of 70% or more inorder to continue to the next level.\n")
+        print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_\n")
+        print("Skills Rating:\n[Beginner]\t[Intermediate]\t[Rockstar]\n")
+        Expert_level = input("Please tell us your level of expertise on " + Field + "ing : ")
+        print("================================================\n")
+        if (Expert_level.upper()) == "BEGINNER":
+            print("You have rated yourself as a " + Expert_level + ".\n")
+            questions = [
+                question(question_prompts[0], "c"),
+                question(question_prompts[1], "a"),
+                question(question_prompts[2], "b"),
+                question(question_prompts[3], "b"),
+                question(question_prompts[4], "c"),
+            ]
+        elif (Expert_level.upper()) == "INTERMEDIATE":
+            print("You have rated yourself as an " + Expert_level + ".\n")
+            questions = [
+                question(question_prompts[20], "b"),
+                question(question_prompts[21], "a"),
+                question(question_prompts[22], "a"),
+                question(question_prompts[23], "d"),
+                question(question_prompts[24], "a"),
+            ]
+        elif (Expert_level.upper()) == "ROCKSTAR":
+            print("You have rated yourself as a " + Expert_level + ".\n")
+            questions = [
+                question(question_prompts[40], "a"),
+                question(question_prompts[41], "a"),
+                question(question_prompts[42], "b"),
+                question(question_prompts[43], "c"),
+                question(question_prompts[44], "a"),
+            ]
+        else:
+            print("")
+
+    elif (Field.upper()) == "NETWORK":
+        print(
+            name + ", You have selected Networks.\nComplete the multiple questions\nwith a score of 70% or more inorder to continue the course.\n")
+        print("<><><><><><><><><><><><><><><><><><><><><><><><>\n")
+        print("Skills Rating:\n[Beginner]\t[Intermediate]\t[Rockstar]\n")
+        Expert_level = input("Please tell us your expert level on " + Field + "ing : ")
+        print("================================================\n")
+        if (Expert_level.upper()) == "BEGINNER":
+            print("You have rated yourself as a " + Expert_level + ".\n")
+            questions = [
+                question(question_prompts[5], "a"),
+                question(question_prompts[6], "c"),
+                question(question_prompts[7], "b"),
+                question(question_prompts[8], "a"),
+                question(question_prompts[9], "b"),
+            ]
+        elif (Expert_level.upper()) == "INTERMEDIATE":
+            print("You have rated yourself as an " + Expert_level + ".\n")
+            questions = [
+                question(question_prompts[25], "b"),
+                question(question_prompts[26], "b"),
+                question(question_prompts[27], "c"),
+                question(question_prompts[28], "b"),
+                question(question_prompts[29], "b"),
+            ]
+        elif (Expert_level.upper()) == "ROCKSTAR":
+            print("You have rated yourself as a " + Expert_level + ".\n")
+            questions = [
+                question(question_prompts[45], "a"),
+                question(question_prompts[46], "a"),
+                question(question_prompts[47], "b"),
+                question(question_prompts[48], "c"),
+                question(question_prompts[49], "c"),
+            ]
+    elif (Field.upper()) == "DATABASE":
+        print(
+            name + ", You have selected Databases.\nComplete the multiple questions\nwith a score of 60% or more inorder to continue the course.\n")
+        print("|_-_|_-_|_-_|_-_|_-_|_-_|_-_|_-_|_-_|_-_|_-_|_-|\n")
+        print("Skills Rating:\n[Beginner]\t[Intermediate]\t[Rockstar]\n")
+        Expert_level = input("Please tell us your expert level on " + Field + "s : ")
+        print("================================================\n")
+        if (Expert_level.upper()) == "BEGINNER":
+            print("You have rated yourself as a " + Expert_level + ".\n")
+            questions = [
+                question(question_prompts[10], "c"),
+                question(question_prompts[11], "b"),
+                question(question_prompts[12], "c"),
+                question(question_prompts[13], "d"),
+                question(question_prompts[14], "c"),
+            ]
+        elif (Expert_level.upper()) == "INTERMEDIATE":
+            print("You have rated yourself as an " + Expert_level + ".\n")
+            questions = [
+                question(question_prompts[30], "a"),
+                question(question_prompts[31], "a"),
+                question(question_prompts[32], "b"),
+                question(question_prompts[33], "c"),
+                question(question_prompts[34], "c"),
+            ]
+        elif (Expert_level.upper()) == "ROCKSTAR":
+            print("You have rated yourself as a " + Expert_level + ".\n")
+            questions = [
+                question(question_prompts[50], "b"),
+                question(question_prompts[51], "b"),
+                question(question_prompts[52], "b"),
+                question(question_prompts[53], "b"),
+                question(question_prompts[54], "d"),
+            ]
+
+    elif (Field.upper()) == "BUSINESS":
+        print(
+            name + ", You have selected Business Analysis.\nComplete the multiple questions\nwith a score of 80% or more inorder to meet a professional mentor.\n")
+        print("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n")
+        print("Skills Rating:\n[Beginner]\t[Intermediate]\t[Rockstar]\n")
+        Expert_level = input("Please tell us your expert level on " + Field + "es : ")
+        print("================================================\n")
+        if (Expert_level.upper()) == "BEGINNER":
+            print("You have rated yourself as a " + Expert_level + ".\n")
+            questions = [
+                question(question_prompts[15], "c"),
+                question(question_prompts[16], "d"),
+                question(question_prompts[17], "b"),
+                question(question_prompts[18], "c"),
+                question(question_prompts[19], "b"),
+            ]
+        elif (Expert_level.upper()) == "INTERMEDIATE":
+            print("You have rated yourself as a " + Expert_level + ".\n")
+            questions = [
+                question(question_prompts[35], "b"),
+                question(question_prompts[36], "b"),
+                question(question_prompts[37], "a"),
+                question(question_prompts[38], "c"),
+                question(question_prompts[39], "b"),
+            ]
+        elif (Expert_level.upper()) == "ROCKSTAR":
+            print("You have rated yourself as a " + Expert_level + ".\n")
+            questions = [
+                question(question_prompts[56], "b"),
+                question(question_prompts[57], "b"),
+                question(question_prompts[58], "d"),
+                question(question_prompts[59], "b"),
+                question(question_prompts[60], "b"),
+            ]
     else:
-        print("")
+        print("You have not selected a valid field ")
+    ##########################
+    print(
+        "\nThanks for your participation " + name + ".\nGood luck with the Skills_Assessment!!!\nLet the games begin!!!!\n\n")
+    print("<|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|")
 
-elif (Field.upper()) == "NETWORK":
-    print(name+", You have selected Networks.\nComplete the multiple questions\nwith a score of 70% or more inorder to continue the course.\n")
-    print("<><><><><><><><><><><><><><><><><><><><><><><><>\n")
-    print("Skills Rating:\n[Beginner]\t[Intermediate]\t[Rockstar]\n")
-    Expert_level = input("Please tell us your expert level on " + Field+"ing : ")
-    print("================================================\n")
-    if (Expert_level.upper()) == "BEGINNER":
-        print("You have rated yourself as a " + Expert_level+".\n")
-        questions = [
-            question(question_prompts[5], "a"),
-            question(question_prompts[6], "c"),
-            question(question_prompts[7], "b"),
-            question(question_prompts[8], "a"),
-            question(question_prompts[9], "b"),
-        ]
-    elif (Expert_level.upper()) == "INTERMEDIATE":
-        print("You have rated yourself as an " + Expert_level + ".\n")
-        questions = [
-            question(question_prompts[25], "b"),
-            question(question_prompts[26], "b"),
-            question(question_prompts[27], "c"),
-            question(question_prompts[28], "b"),
-            question(question_prompts[29], "b"),
-        ]
-    elif (Expert_level.upper()) == "ROCKSTAR":
-        print("You have rated yourself as a " + Expert_level + ".\n")
-        questions = [
-            question(question_prompts[45], "a"),
-            question(question_prompts[46], "a"),
-            question(question_prompts[47], "b"),
-            question(question_prompts[48], "c"),
-            question(question_prompts[49], "c"),
-        ]
-elif (Field.upper()) == "DATABASE":
-    print(name+", You have selected Databases.\nComplete the multiple questions\nwith a score of 60% or more inorder to continue the course.\n")
-    print("|_-_|_-_|_-_|_-_|_-_|_-_|_-_|_-_|_-_|_-_|_-_|_-|\n")
-    print("Skills Rating:\n[Beginner]\t[Intermediate]\t[Rockstar]\n")
-    Expert_level = input("Please tell us your expert level on " + Field+"s : ")
-    print("================================================\n")
-    if (Expert_level.upper()) == "BEGINNER":
-        print("You have rated yourself as a " + Expert_level + ".\n")
-        questions = [
-            question(question_prompts[10], "c"),
-            question(question_prompts[11], "b"),
-            question(question_prompts[12], "c"),
-            question(question_prompts[13], "d"),
-            question(question_prompts[14], "c"),
-        ]
-    elif (Expert_level.upper()) == "INTERMEDIATE":
-        print("You have rated yourself as an " + Expert_level + ".\n")
-        questions = [
-            question(question_prompts[30], "a"),
-            question(question_prompts[31], "a"),
-            question(question_prompts[32], "b"),
-            question(question_prompts[33], "c"),
-            question(question_prompts[34], "c"),
-        ]
-    elif (Expert_level.upper()) == "ROCKSTAR":
-        print("You have rated yourself as a " + Expert_level + ".\n")
-        questions = [
-            question(question_prompts[50], "b"),
-            question(question_prompts[51], "b"),
-            question(question_prompts[52], "b"),
-            question(question_prompts[53], "b"),
-            question(question_prompts[54], "d"),
-        ]
+    user_profile = [
+        {'name: ' + name, 'email: '+ email, 'field: '+ Field, 'level of expertise: ' + Expert_level}
+    ]
 
-elif (Field.upper()) == "BUSINESS":
-    print(name+", You have selected Business Analysis.\nComplete the multiple questions\nwith a score of 80% or more inorder to meet a professional mentor.\n")
-    print("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n")
-    print("Skills Rating:\n[Beginner]\t[Intermediate]\t[Rockstar]\n")
-    Expert_level = input("Please tell us your expert level on " + Field+"es : ")
-    print("================================================\n")
-    if (Expert_level.upper()) == "BEGINNER":
-        print("You have rated yourself as a " + Expert_level + ".\n")
-        questions = [
-            question(question_prompts[15], "c"),
-            question(question_prompts[16], "d"),
-            question(question_prompts[17], "b"),
-            question(question_prompts[18], "c"),
-            question(question_prompts[19], "b"),
-        ]
-    elif (Expert_level.upper()) == "INTERMEDIATE":
-        print("You have rated yourself as a " + Expert_level + ".\n")
-        questions = [
-            question(question_prompts[35], "b"),
-            question(question_prompts[36], "b"),
-            question(question_prompts[37], "a"),
-            question(question_prompts[38], "c"),
-            question(question_prompts[39], "b"),
-        ]
-    elif (Expert_level.upper()) == "ROCKSTAR":
-        print("You have rated yourself as a " + Expert_level + ".\n")
-        questions = [
-            question(question_prompts[56], "b"),
-            question(question_prompts[57], "b"),
-            question(question_prompts[58], "d"),
-            question(question_prompts[59], "b"),
-            question(question_prompts[60], "b"),
-        ]
-else:
-    print("You have not selected a valid field ")
-##########################
-print("\nThanks for your participation "+name+".\nGood luck with the Skills_Assessment!!!\nLet the games begin!!!!\n\n")
-print("<|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|")
-def run_test(questions):
-    score = 0;
-    for question in questions:
-        answer = input(question.prompt)
-        if answer == question.answer:
-            score += 1
-    avg = (score / len(questions) * 100)
-    print("Skills Assessment Complete!!!\nHey, You Got " + str(score) + " Out Of " + str(len(questions)) + " correct.")
-    if avg >= 70:
-        print("Congratualations you got an average of ("+str(avg)+" %)\nyou are truly a " + Expert_level + " ,in " + Field)
-    elif avg >= 60:
-        print("Congratualations you got an avrage of ("+str(avg)+" %)\n"+"you are truly a "+ Expert_level + " ,in " + Field)
-    elif avg >= 80:
-        print("Congratualations >.<*ROCKSTAR*>.< your average is ("+str(avg)+" %)\n"+"you are far more than a " + Expert_level + " ,in " + Field + "We are taking to the next level,\nyou'd be introduced to mentor [9INO6ANO]")
-    else:
-        print(name + "Unfortunately your score was below average [" + score + "]\nYou may re-take the assessment- if you want?")
-        print("Your percentage is " + str(avg) + "%")
+    def run_test(questions):
+        score = 0;
+        for question in questions:
+            answer = input(question.prompt)
+            if answer == question.answer:
+                score += 1
+        avg = (score / len(questions) * 100)
+        print("Hello "+name+" : Your skills assessment is complete!!!\nHey, You Got " + str(score) + " Out Of " + str(
+            len(questions)) + " correct.")
 
-run_test(questions)
+
+        if avg >= 70:
+            print("Congratualations you got an average of (" + str(
+                avg) + " %)\nyou are truly a " + Expert_level + " ,in " + Field)
+        elif avg >= 60:
+            print("Congratualations you got an avrage of (" + str(
+                avg) + " %)\n" + "you are truly a " + Expert_level + " ,in " + Field)
+        elif avg >= 80:
+            print("Congratualations >.<*ROCKSTAR*>.< your average is (" + str(
+                avg) + " %)\n" + "you are far more than a " + Expert_level + " ,in " + Field + "\nWe are taking to the next level,\nyou'd be introduced to mentor [9INO6ANO]")
+        else:
+            print(name + ", Unfortunately your score was below average [" + str(
+                score) +" / "+str(len(questions))+ "]\nYou may re-take the assessment- if you want?")
+            print("Your percentage is " + str(avg) + "%")
+
+        print(user_profile)
+        print(name +" has received an overall "+str(avg)+" % for the skills assessment.")
+
+    run_test(questions)
+
+except ValueError as e:
+    print(e)
+    print("You have entered an Incorrect value!!!\nPlease try again.")
+except FileNotFoundError as e:
+    print(e)
+    print("The file was not found")
+except Exception as e:
+    print(e)
+    print("You typed an invalid value\nPlease read through the instructions carefully.")
+
 print("<|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|><|")
 print("This was a demonstration of the type of application we want to develop.\nThank you for your participation (*_-)\n[[][PATH PIONEER][][]\n")
